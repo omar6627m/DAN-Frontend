@@ -10,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class AuthenticationService {
 
 
-  private loginUrl = 'http://localhost:8080/account/login'; 
+  private loginUrl = 'http://localhost:8080/login'; 
   private registerUrl = 'http://localhost:8080/account/register'
   
   constructor(private http: HttpClient) { }

@@ -16,6 +16,7 @@ import { DonationsComponent } from './components/donations/donations.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { HeroComponent } from './components/hero/hero.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule ,
+     
 
   ],
   providers: [],
