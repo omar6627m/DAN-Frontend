@@ -14,7 +14,7 @@ export class LocalStorageService {
 
 
 
-  //setToken , getToken , clearData, setRole, getRole, setUser and getUser for other Inf
+  //setToken , getToken , clearData, setUser and getUser for other Inf
 
 
   setToken(token: string): void {
@@ -27,7 +27,7 @@ export class LocalStorageService {
     const expiration = localStorage.getItem(this.expirationKey);
     if (expiration && new Date(expiration) > new Date()) {
       return localStorage.getItem(this.tokenKey);
-    }
+    } 
     this.removeToken();
     return null;
   }
@@ -45,6 +45,8 @@ export class LocalStorageService {
       const userJson = localStorage.getItem(this.USER_KEY);
       return userJson ? JSON.parse(userJson) : null;
     }
+
+
     
  
     //Logout 

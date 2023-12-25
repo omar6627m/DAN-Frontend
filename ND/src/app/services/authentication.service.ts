@@ -10,8 +10,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class AuthenticationService {
 
 
-  private loginUrl = 'http://localhost:8080/user/login'; 
-  private registerUrl = 'http://localhost:8080/user/register'
+  private loginUrl = 'http://localhost:8080/account/login'; 
+  private registerUrl = 'http://localhost:8080/account/register'
   
   constructor(private http: HttpClient) { }
 
@@ -29,8 +29,8 @@ export class AuthenticationService {
   }
 
 
-  register(email: string, password: string): Observable<any> {
-    const registerData = { email, password };
+  register(email: string, password: string,first_name:string, last_name:string): Observable<any> {
+    const registerData = { email, password ,first_name,last_name};
 
     return this.http.post<any>(`${this.registerUrl}`, registerData)
       .pipe(
