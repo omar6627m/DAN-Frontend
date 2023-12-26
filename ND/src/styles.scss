@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #7B42BC;
+  --primary-light: #E9D9FF;
+  --typo-primary: #2F3031;
+  --typo-v1: #58595A;
+  --typo-v2: #888B8D;
+  --border-color: rgba(0,0,0,.22);
+  --typo-alternative: rgba(255,255,255,.95);
+  --bg: #FFFFFF;
+  --bg-v1: #F4F4F5;
+  --dark: #000;
+  --dark-v1: #1D1E1F;
+  --gradient:linear-gradient(90deg, rgba(241,242,243,1) 0%, rgba(255,255,255,1) 100%);
+  --gradient-v2:linear-gradient(90deg, rgba(245,245,246,1) 0%, rgba(255,255,255,1) 100%);
+  --drop-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+}
+
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
+  transition: all .15s ease-in;
+}
+
+a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--typo-primary);
+  text-decoration: none;
+}
+a:hover,a:focus{
+  opacity: .8;
+}
