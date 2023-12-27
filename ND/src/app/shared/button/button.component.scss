@@ -1,0 +1,25 @@
+.btn{
+  cursor: pointer;
+}
+
+.btn:focus,.btn:hover,.btn:active{
+  opacity: .9;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 23px;
+  font-size: 14px;
+}
+
+.btn.btn-secondary {
+  color: var(--typo-v1);
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 23px;
+  font-size: 14px;
+}
