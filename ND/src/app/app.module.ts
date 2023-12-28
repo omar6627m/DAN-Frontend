@@ -12,12 +12,12 @@ import { FeedPageComponent } from './components/landing-section/feed-page/feed-p
 import { HomePageComponent } from './components/landing-section/home-page/home-page.component';
 import { LoginComponent } from './components/auth-section/login/login.component';
 import { RegisterComponent } from './components/auth-section/register/register.component';
-import { DonationsComponent } from './components/donations/donations.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './shared/button/button.component';
+import { DonationSectionComponent } from './components/donation-section/donation-section.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +31,11 @@ import { ButtonComponent } from './shared/button/button.component';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    DonationsComponent,
+    DonationSectionComponent,
     StatisticsComponent,
     HeroComponent,
-    ButtonComponent
+    ButtonComponent,
+    DonationSectionComponent
   ],
   imports: [
     BrowserModule,

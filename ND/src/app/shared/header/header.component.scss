@@ -2,6 +2,8 @@
   padding: 0 15px;
   box-shadow: var(--drop-shadow);
 
+    z-index: 1000; // Adjust the value based on your needs
+
   .container{
     display: flex;
     align-items: center;
