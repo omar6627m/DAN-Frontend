@@ -1,1 +1,9 @@
 <p>statistics works!</p>
+
+<google-map
+  *ngIf="apiLoaded | async"
+  [options]="options"
+  (mapClick)="addMarker($event)"
+>
+  <map-marker *ngFor="let position of markerPositions" [position]="position" [options]="markerOptions" />
+</google-map>
