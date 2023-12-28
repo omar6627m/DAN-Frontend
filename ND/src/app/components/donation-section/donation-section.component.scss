@@ -56,7 +56,7 @@
       .buttons {
         display: flex;
         gap: 15%;
-        @media (max-width: 670px) {
+        @media (max-width: 1000px) {
             gap: 0;
             justify-content: center;
           }
