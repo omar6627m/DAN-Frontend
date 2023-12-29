@@ -7,9 +7,11 @@ body{
     display: grid;
 }
 
-.items{
-    margin : 0 7.5% 0 7.5%;
-    text-align: center;
+.items {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
 }
 .header{
     background: #ffffff;
@@ -18,9 +20,6 @@ body{
 
 
 .hero{
-    margin : 0;
-
-
 }
 
 
