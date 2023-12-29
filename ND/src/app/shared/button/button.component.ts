@@ -6,11 +6,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() style: string = 'default';
+  @Input() style: string = 'primary';
   @Output() onClick: EventEmitter<void> = new EventEmitter<void>();
 
   getButtonClass(): string {
-    console.log(this.style)
     return `btn btn-${this.style}`;
   }
 
