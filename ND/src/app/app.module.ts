@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './shared/button/button.component';
 import { DonationSectionComponent } from './components/donation-section/donation-section.component';
 import {GoogleMapsModule} from "@angular/google-maps";
+import { CauseCardComponent } from './shared/cause-card/cause-card.component';
+import { ArrowLinkComponent } from './shared/arrow-link/arrow-link.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {GoogleMapsModule} from "@angular/google-maps";
     StatisticsComponent,
     HeroComponent,
     ButtonComponent,
-    DonationSectionComponent
+    DonationSectionComponent,
+    CauseCardComponent,
+    ArrowLinkComponent
   ],
   imports: [
     BrowserModule,

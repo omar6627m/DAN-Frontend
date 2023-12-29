@@ -4,13 +4,15 @@ body{
     padding: 0;
 }
 .grid-items{
-    display: grid;
+    //display: grid;
 }
 
-.items{
-    margin : 0 7.5% 0 7.5%;
-    text-align: center;
+.items {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
 .header{
     background: #ffffff;
 
@@ -18,9 +20,6 @@ body{
 
 
 .hero{
-    margin : 0;
-
-
 }
 
 
@@ -30,8 +29,6 @@ body{
 
 }
 .stats{
-    background: lightsalmon;
-
 }
 
 .footer{

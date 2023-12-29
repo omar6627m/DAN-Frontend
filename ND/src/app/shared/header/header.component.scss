@@ -1,10 +1,15 @@
-.header{
+.header {
   padding: 0 15px;
   box-shadow: var(--drop-shadow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
 
-    z-index: 1000; // Adjust the value based on your needs
+  z-index: 1000; // Adjust the value based on your needs
 
-  .container{
+
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,12 +18,16 @@
     margin: 0 auto;
   }
 
-  .nav{
+  .logo > rect:first-child {
+    fill: var(--primary);
+  }
+
+  .nav {
     display: none;
   }
 
   .mobile-nav {
-    background: #fff;
+    background: var(--bg);
     color: var(--typo-primary);
     position: fixed;
     top: 0;
@@ -30,7 +39,7 @@
     padding: 20px;
     box-shadow: var(--drop-shadow);
 
-    .close-menu{
+    .close-menu {
       padding: 4px;
       border-color: #ccc;
     }
@@ -44,14 +53,14 @@
       }
     }
 
-    .cta{
+    .cta {
       display: flex;
       gap: 10px;
       align-items: center;
     }
   }
 
-  .open-menu,.close-menu{
+  .open-menu, .close-menu {
     width: 30px;
     display: flex;
     background-color: transparent;
@@ -59,18 +68,19 @@
     //border: 1px solid #cecece;
     border: 0;
 
-    svg{
+    svg {
       width: 100%;
       height: 100%;
 
-      path{
+      path {
         stroke: var(--typo-v1);
       }
     }
   }
-  .open-menu:hover,.open-menu:active,
-  .close-menu:hover,.close-menu:active{
-    svg path{
+
+  .open-menu:hover, .open-menu:active,
+  .close-menu:hover, .close-menu:active {
+    svg path {
       stroke: var(--typo-v2);
     }
   }
