@@ -13,6 +13,10 @@
     margin: 0 auto;
   }
 
+  .logo > rect:first-child{
+    fill: var(--primary);
+  }
+
   .nav{
     display: none;
   }
