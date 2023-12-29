@@ -1,57 +1,55 @@
 .donation-card {
-  width: 26%; // Adjust the width for larger screens
-  margin-bottom: 20px;
+  background: var(--bg);
+  box-shadow: var(--drop-shadow);
+  border-radius: 6px;
+  padding: 15px;
+  width: 100%;
+  max-width: 350px;
 
-  @media (max-width: 768px) {
-    width: 45%; // Adjust the width for smaller screens
-  }
-
-  @media (max-width: 480px) {
-    width: 100%; // Full width for even smaller screens
-  }
 
   img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; // Optional: Add border-radius for rounded corners
+    border-radius: 6px;
   }
 
   .description {
-    margin: 10px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--typo-primary);
+    margin: 15px 0;
   }
 
-  .donation-bar {
-    height: 10px; // Sample height, adjust as needed
-    background-color: #ccc; // Grey background for the full bar
-
-    .progress-bar {
-      height: 100%; // Take up the full height of the donation bar
-      width: 75%; // Set the width to 50% for the progress
-      background-color: #7b42bc; // Mauve background for the progress bar
-    }
+  .donation-bar{
+    margin: 17px 0 8px;
+    width: 100%;
+    height: 6px;
+    background: var(--bg-v2);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
   }
 
-  .donation-info {
+  .progress-bar {
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .donation-info{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--typo-primary);
+    margin-bottom: 12px;
+  }
+
+  .buttons{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .buttons {
-    display: flex;
-    gap: 15%;
-    @media (max-width: 1000px) {
-      gap: 0;
-      justify-content: center;
-    }
-
-    button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
   }
 }
