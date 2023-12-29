@@ -30,29 +30,5 @@
     }
   }
 
-  .arrow-container {
-    display: flex;
-    justify-content: flex-end;
-    margin: 35px 0 0;
-
-    .arrow {
-      font-size: 2em;
-      color: var(--typo-primary);
-
-    }
-
-    .more-causes {
-      font-size: 1em;
-      color: var(--typo-primary);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      .material-icons{
-        font-size: 1.2em;
-        margin-top: 5px;
-      }
-    }
-  }
-
 
 }
