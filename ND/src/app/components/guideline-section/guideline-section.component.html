@@ -1,1 +1,12 @@
-<p>guideline-section works!</p>
+<div class="container">
+  <h3>Guidelines Posts</h3>
+
+  <div class="guidelines">
+
+    <a class="guideline" *ngFor="let guideline of guidelines" routerLink="/guidelines/{{guideline.title}}">
+      <i class="material-icons">{{guideline.icon}}</i>
+      <span>{{guideline.title}}</span>
+    </a>
+
+  </div>
+</div>

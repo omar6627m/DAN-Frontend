@@ -1,0 +1,35 @@
+.container {
+  margin-bottom: 100px;
+  color: var(--typo-primary);
+
+  h3 {
+    font-weight: 700;
+    font-size: 2em;
+    margin: 15px 0 30px;
+  }
+
+  .guidelines{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    justify-content: space-between;
+    justify-items: stretch;
+    row-gap: 20px;
+    column-gap: 50px;
+
+    .guideline{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: var(--typo-v1);
+      background-color: var(--primary-light);
+      border-left: 5px solid var(--primary);
+      border-radius: 5px;
+      padding: 10px 15px;
+    }
+  }
+
+}
