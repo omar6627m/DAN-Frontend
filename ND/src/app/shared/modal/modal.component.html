@@ -1,0 +1,12 @@
+<div *ngIf="isOpen" class="modal">
+  <div (click)="close.emit()" class="backdrop"></div>
+
+  <div class="content" [style]="{width,maxWidth}">
+      <button (click)="close.emit()" class="bt-close">
+        <i class="material-icons">close</i>
+      </button>
+
+    <ng-content select=".modal-content" ></ng-content>
+
+  </div>
+</div>

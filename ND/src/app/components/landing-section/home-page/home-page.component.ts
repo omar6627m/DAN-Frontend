@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+  loginModal: boolean = true;
+  toggleLoginModal(){
+    this.loginModal = !this.loginModal;
+  }
 
 }

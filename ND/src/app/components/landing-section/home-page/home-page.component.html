@@ -1,25 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div class="grid-items">
-        <div class="header"><app-header></app-header></div>
+<app-modal (close)="toggleLoginModal()" [isOpen]="loginModal">
+  <div class="modal-content">
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <input>
+    <input>
 
-        <div class="hero"><app-hero></app-hero></div>
+    <app-arrow-link></app-arrow-link>
+    <app-button>Submit</app-button>
+  </div>
+</app-modal>
 
+<div class="grid-items">
+    <div class="header"><app-header></app-header></div>
 
-        <div class="donations"><app-donation-section></app-donation-section></div>
-
-        <div class="items stats"> <app-statistics></app-statistics></div>
-
-        <div class=" items news"><app-news-section></app-news-section> </div>
-
-        <div class="items footer"> <app-footer></app-footer></div>
+    <div class="hero"><app-hero></app-hero></div>
 
 
-    </div>
-</body>
-</html>
+    <div class="donations"><app-donation-section></app-donation-section></div>
 
+    <div class="items stats"> <app-statistics></app-statistics></div>
+
+    <div class="items community"> <app-community-section></app-community-section></div>
+
+    <div class=" items guideline"><app-guideline-section></app-guideline-section> </div>
+
+    <div class="news"><app-news-section></app-news-section> </div>
+
+    <div class="footer"> <app-footer></app-footer></div>
+
+
+</div>

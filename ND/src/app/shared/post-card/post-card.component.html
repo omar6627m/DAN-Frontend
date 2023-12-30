@@ -1,0 +1,14 @@
+<div class="post" *ngIf="post">
+  <h4 class="post-title">{{post.title}}</h4>
+  <ng-container *ngIf="post.type === 'volunteering'">
+    <p class="post-type green">{{post.type}}</p>
+  </ng-container>
+  <ng-container *ngIf="post.type === 'help'">
+    <p class="post-type red">{{post.type}}</p>
+  </ng-container>
+  <ng-container *ngIf="post.type === 'news'">
+    <p class="post-type blue">{{post.type}}</p>
+  </ng-container>
+  <p class="post-body">{{post.body  | slice:0:140}}..</p>
+  <app-button>Read More</app-button>
+</div>

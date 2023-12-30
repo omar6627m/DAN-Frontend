@@ -21,6 +21,8 @@ import { DonationSectionComponent } from './components/donation-section/donation
 import {GoogleMapsModule} from "@angular/google-maps";
 import { CauseCardComponent } from './shared/cause-card/cause-card.component';
 import { ArrowLinkComponent } from './shared/arrow-link/arrow-link.component';
+import { PostCardComponent } from './shared/post-card/post-card.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ArrowLinkComponent } from './shared/arrow-link/arrow-link.component';
     ButtonComponent,
     DonationSectionComponent,
     CauseCardComponent,
-    ArrowLinkComponent
+    ArrowLinkComponent,
+    PostCardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
