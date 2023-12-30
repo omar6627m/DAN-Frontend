@@ -1,1 +1,21 @@
-<p>community-section works!</p>
+<div class="container">
+  <h3>Community</h3>
+
+  <div class="tabs">
+    <div class="tab" *ngFor="let tab of tabs" (click)="setSelectedTab(tab)">
+      <div class="tab-title" *ngIf="tab != selectedTab">
+          <span> {{tab}}</span>
+      </div>
+      <div class="tab-title selected" *ngIf="tab === selectedTab">
+        <span> {{tab}}</span>
+        <span class="tab-underline"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="posts">
+    <app-post-card *ngFor="let post of posts" [post]="post"></app-post-card>
+  </div>
+
+  <app-arrow-link text="More Posts"></app-arrow-link>
+</div>

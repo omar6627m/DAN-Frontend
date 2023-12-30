@@ -1,0 +1,42 @@
+.post {
+  width: 100%;
+  max-width: 350px;
+
+
+  .post-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--typo-primary);
+  }
+  .post-type {
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--typo-v1);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .post-type.green{
+    background-color: #F8FFEF;
+  }
+  .post-type.blue{
+    background-color: #EFF9FF;
+  }
+  .post-type.red{
+    background-color: #FFEFEF;
+  }
+
+  .post-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--typo-v2);
+    font-size: 17px;
+    margin: 20px 0;
+  }
+}
+
+
