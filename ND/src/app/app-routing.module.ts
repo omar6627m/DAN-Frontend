@@ -8,8 +8,6 @@ import { FeedPageComponent } from './components/landing-section/feed-page/feed-p
 const routes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to the login page by default
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
 
   { path: 'home', component: HomePageComponent },
 

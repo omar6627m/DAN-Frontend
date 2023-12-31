@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent {
   public mobileNavOpen: boolean = false;
+  @Output() openLogin: EventEmitter<void> = new EventEmitter<void>();
+  @Output() openRegister: EventEmitter<void> = new EventEmitter<void>();
 
 
   constructor(private router: Router) { }
@@ -19,11 +21,11 @@ export class HeaderComponent {
     this.mobileNavOpen = false;
   }
 
-  goToDonate(){
-    this.router.navigate(['/donate']);
+  goToLogin(){
+    this.openLogin.emit();
   }
-  goToHelp(){
-    this.router.navigate(['/help']);
+  goToRegister(){
+    this.openRegister.emit();
   }
 
 }

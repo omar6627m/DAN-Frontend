@@ -1,7 +1,15 @@
-<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-    <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" required>
-    <label for="password">Password:</label>
-    <input type="password" id="password" formControlName="password" required>
-    <button type="submit">Login</button>
-  </form>
+<app-modal maxWidth="450px" (close)="closeHandler()" [isOpen]="isOpen">
+    <form class="modal-content" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+      </div>
+      <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" required>
+      </div>
+      <div class="form-row">
+        <app-button>Login</app-button>
+      </div>
+    </form>
+</app-modal>

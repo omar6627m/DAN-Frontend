@@ -4,6 +4,8 @@
 
 :root {
   --primary: #8EBC42;
+  --red: #F44A55;
+  --disabled: #4A4A4A;
   --primary-light: #FBFFF1;
   --typo-primary: #2F3031;
   --typo-v1: #58595A;
@@ -38,3 +40,39 @@ a{
 a:hover,a:focus{
   opacity: .8;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-row{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 300px;
+
+    label{
+      font-weight: 400;
+      font-size: 17px;
+      color: var(--typo-primary);
+    }
+
+    input {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 6px 12px;
+      outline: 0;
+      color: var(--typo-v1);
+      font-size: 14px;
+    }
+    input:focus{
+      border-color: var(--typo-v1);
+    }
+  }
+
+
+}
+

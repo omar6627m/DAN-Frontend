@@ -1,18 +1,8 @@
-<app-modal (close)="toggleLoginModal()" [isOpen]="loginModal">
-  <div class="modal-content">
-    <p>Hello</p>
-    <p>Hello</p>
-    <p>Hello</p>
-    <input>
-    <input>
-
-    <app-arrow-link></app-arrow-link>
-    <app-button>Submit</app-button>
-  </div>
-</app-modal>
+<app-login (close)="toggleLoginModal()" [isOpen]="loginModal"></app-login>
+<app-register (close)="toggleRegisterModal()" [isOpen]="registerModal"></app-register>
 
 <div class="grid-items">
-    <div class="header"><app-header></app-header></div>
+    <div class="header"><app-header (openLogin)="toggleLoginModal()" (openRegister)="toggleRegisterModal()"></app-header></div>
 
     <div class="hero"><app-hero></app-hero></div>
 
