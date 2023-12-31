@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
@@ -9,7 +9,8 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  @Input() isOpen: boolean = false;
+  @Output() close: EventEmitter<void> = new EventEmitter<void>();
   loginForm!: FormGroup;
 
   constructor(private fb: FormBuilder, private auth : AuthenticationService, private storage : LocalStorageService) { }
@@ -29,8 +30,12 @@ export class LoginComponent implements OnInit {
         this.storage.setUser(response);
         this.storage.setToken(response.token);
       },(error)=>{
-        console.log(error); 
+        console.log(error);
       }
     )
+  }
+
+  closeHandler(): void {
+    this.close.emit();
   }
 }

@@ -44,7 +44,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     CauseCardComponent,
     ArrowLinkComponent,
     PostCardComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,23 @@
-<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
-    <label for="first_name">First Name:</label>
-    <input type="text" id="first_name" formControlName="first_name" required>
-  
-    <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" formControlName="last_name" required>
-  
-    <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" required>
-  
-    <label for="password">Password:</label>
-    <input type="password" id="password" formControlName="password" required>
-  
-    <button type="submit">Register</button>
+<app-modal maxWidth="450px"  (close)="closeHandler()" [isOpen]="isOpen">
+<form class="modal-content" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <div class="form-row">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" formControlName="first_name" required>
+    </div>
+    <div class="form-row">
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" formControlName="last_name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div class="form-row">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" required>
+    </div>
+    <div class="form-row">
+      <app-button>Register</app-button>
+    </div>
   </form>
+</app-modal>

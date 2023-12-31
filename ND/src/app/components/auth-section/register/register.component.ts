@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
@@ -9,6 +9,8 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  @Input() isOpen: boolean = false;
+  @Output() close: EventEmitter<void> = new EventEmitter<void>();
   registerForm!: FormGroup;
 
   constructor(private fb: FormBuilder,private storage: LocalStorageService, private auth : AuthenticationService) { }
@@ -29,11 +31,15 @@ export class RegisterComponent {
       this.registerForm.value.last_name).subscribe(
       (response) => {
         this.storage.setUser(response);
-        this.storage.setToken(response.token);     
-       }, 
+        this.storage.setToken(response.token);
+       },
       (error)=>{
         console.log(error);
       }
     )
+  }
+
+  closeHandler(): void {
+    this.close.emit();
   }
 }
