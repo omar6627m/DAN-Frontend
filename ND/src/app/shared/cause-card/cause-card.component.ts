@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cause-card',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./cause-card.component.scss']
 })
 export class CauseCardComponent {
+  @Input() disabled: boolean = false;
 
+  constructor(private router: Router) {
+  }
+
+  learnMoreClickHandler() {
+    this.router.navigate(["/causes/id"]);
+  }
 }

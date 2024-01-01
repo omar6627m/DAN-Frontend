@@ -3,10 +3,11 @@
   color: var(--typo-primary);
   background-color: var(--bg-v1);
 
-  .content{
+  .content {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
+  }
 
     h3 {
       font-weight: 700;
@@ -95,6 +96,8 @@
         }
       }
     }
+}
 
-  }
+.container.alt{
+  background-color: var(--bg);
 }

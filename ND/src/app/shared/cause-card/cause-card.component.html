@@ -1,5 +1,5 @@
 <div class="donation-card">
-  <img src="./assets/1.webp" alt="Donation 1 Image">
+  <img src="./assets/placeholder-1.jpg" alt="Donation 1 Image">
   <div class="description">Earthquakes in Morocco have left massive damages, they need your help!</div>
   <div class="donation-bar">
     <div class="progress-bar" [style]="{width:72 + '%'}"></div>
@@ -9,7 +9,7 @@
     <span class="limit">Goal: 2.000.000 $</span>
   </div>
   <div class="buttons">
-    <app-button  [style]="'secondary'" >Learn More</app-button>
-    <app-button [style]="'primary'" >Donate Now </app-button>
+    <app-button  [style]="'secondary'" (onClick)="learnMoreClickHandler()" >Learn More</app-button>
+    <app-button [style]="disabled ? 'disabled' : 'primary'" >Donate Now </app-button>
   </div>
 </div>

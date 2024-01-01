@@ -23,6 +23,11 @@ import { CauseCardComponent } from './shared/cause-card/cause-card.component';
 import { ArrowLinkComponent } from './shared/arrow-link/arrow-link.component';
 import { PostCardComponent } from './shared/post-card/post-card.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { CausesPageComponent } from './components/causes/causes-page/causes-page.component';
+import { CauseDetailsPageComponent } from './components/causes/cause-details-page/cause-details-page.component';
+import { MapComponent } from './shared/map/map.component';
+import { PostDetailsPageComponent } from './components/post-details-page/post-details-page.component';
+import { CommentComponent } from './shared/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,11 @@ import { ModalComponent } from './shared/modal/modal.component';
     ArrowLinkComponent,
     PostCardComponent,
     ModalComponent,
+    CausesPageComponent,
+    CauseDetailsPageComponent,
+    MapComponent,
+    PostDetailsPageComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

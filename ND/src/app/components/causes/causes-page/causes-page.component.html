@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <h3>Active Causes</h3>
+  <p>These are the current active causes that urgently need your support.</p>
+
+  <div class="causes-cards">
+    <app-cause-card></app-cause-card>
+    <app-cause-card></app-cause-card>
+    <app-cause-card></app-cause-card>
+    <app-cause-card></app-cause-card>
+    <app-cause-card></app-cause-card>
+  </div>
+
+  <h3>Archived Causes</h3>
+  <p>These are causes that we once fought for. In some we achieved our goals, in others, we tried our best.</p>
+  <div class="causes-cards">
+    <app-cause-card [disabled]="true"></app-cause-card>
+    <app-cause-card [disabled]="true"></app-cause-card>
+    <app-cause-card [disabled]="true"></app-cause-card>
+  </div>
+</div>
+<app-footer></app-footer>

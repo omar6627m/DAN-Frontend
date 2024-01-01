@@ -1,8 +1,12 @@
 .btn{
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 23px;
+  font-size: 14px;
 }
 
-.btn:focus,.btn:hover,.btn:active{
+.btn-secondary:focus,.btn-secondary:hover,.btn-secondary:active,
+.btn-primary:focus,.btn-primary:hover,.btn-primary:active{
   opacity: .9;
 }
 
@@ -10,16 +14,17 @@
   color: #fff;
   background-color: var(--primary);
   border: 0;
-  border-radius: 4px;
-  padding: 10px 23px;
-  font-size: 14px;
 }
 
 .btn.btn-secondary {
   color: var(--typo-v1);
   background-color: var(--bg);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: 10px 23px;
-  font-size: 14px;
+}
+
+.btn.btn-disabled{
+  color: #fff;
+  background-color: var(--disabled);
+  border: 0;
+  cursor: not-allowed;
 }

@@ -4,6 +4,9 @@ import { LoginComponent } from './components/auth-section/login/login.component'
 import { RegisterComponent } from './components/auth-section/register/register.component';
 import { HomePageComponent } from './components/landing-section/home-page/home-page.component';
 import { FeedPageComponent } from './components/landing-section/feed-page/feed-page.component';
+import {CausesPageComponent} from "./components/causes/causes-page/causes-page.component";
+import {CauseDetailsPageComponent} from "./components/causes/cause-details-page/cause-details-page.component";
+import {PostDetailsPageComponent} from "./components/post-details-page/post-details-page.component";
 
 const routes: Routes = [
 
@@ -12,6 +15,12 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
 
   { path: 'feed', component: FeedPageComponent },
+
+  { path: 'feed/:id', component: PostDetailsPageComponent },
+
+  { path: 'causes', component: CausesPageComponent },
+
+  { path: 'causes/:id', component: CauseDetailsPageComponent },
 
 ];
 

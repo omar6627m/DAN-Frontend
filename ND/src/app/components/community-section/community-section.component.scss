@@ -1,5 +1,5 @@
 .container{
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: var(--typo-primary);
 
   h3{
@@ -15,9 +15,6 @@
     width: 100%;
     overflow-x: scroll;
     margin-bottom: 20px;
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 
     .tab {
       cursor: pointer;
@@ -51,20 +48,18 @@
       opacity: .8;
     }
   }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .tabs::-webkit-scrollbar {
-    display: none;
-  }
 
   .posts{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
     justify-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 50px;
     margin: 40px 0;
 
-    @media(min-width: 1500px){
-      gap: 150px;
+    @media (min-width: 834px) {
+      justify-items: flex-start;
+
     }
   }
 }
