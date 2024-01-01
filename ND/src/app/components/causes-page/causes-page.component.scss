@@ -1,0 +1,24 @@
+.container{
+  width: 90%;
+  max-width: 1400px;
+  margin: 120px auto 30px;
+
+  h3,p{
+    margin: 15px 0;
+  }
+
+  .causes-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    justify-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 40px 0;
+
+    @media (min-width: 834px) {
+      justify-items: flex-start;
+
+    }
+
+  }
+}

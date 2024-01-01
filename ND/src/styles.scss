@@ -41,6 +41,19 @@ a:hover,a:focus{
   opacity: .8;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--typo-primary);
+}
+
+p{
+  font-family: 'Inter', sans-serif;
+  color: var(--typo-v1);
+  font-size: 17px;
+}
+
 form{
   display: flex;
   flex-direction: column;
