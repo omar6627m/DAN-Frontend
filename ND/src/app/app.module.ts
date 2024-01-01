@@ -26,6 +26,8 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { CausesPageComponent } from './components/causes/causes-page/causes-page.component';
 import { CauseDetailsPageComponent } from './components/causes/cause-details-page/cause-details-page.component';
 import { MapComponent } from './shared/map/map.component';
+import { PostDetailsPageComponent } from './components/post-details-page/post-details-page.component';
+import { CommentComponent } from './shared/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { MapComponent } from './shared/map/map.component';
     CausesPageComponent,
     CauseDetailsPageComponent,
     MapComponent,
+    PostDetailsPageComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

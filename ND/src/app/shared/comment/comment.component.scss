@@ -1,0 +1,36 @@
+.comment {
+  position: relative;
+  color: var(--typo-v1);
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+
+  .comment-text{
+    margin: 0 25px;
+  }
+
+  .comment-date {
+    margin-left: auto;
+    color: var(--typo-v2);
+  }
+
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--typo-v1);
+  }
+}

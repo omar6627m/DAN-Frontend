@@ -9,6 +9,9 @@
   <ng-container *ngIf="post.type === 'news'">
     <p class="post-type blue">{{post.type}}</p>
   </ng-container>
+  <ng-container *ngIf="post.type === 'announcement'">
+    <p class="post-type blue">{{post.type}}</p>
+  </ng-container>
   <p class="post-body">{{post.body  | slice:0:140}}..</p>
-  <app-button>Read More</app-button>
+  <app-button *ngIf="post.type !== 'announcement'" (onClick)="goToDetails()">Read More</app-button>
 </div>

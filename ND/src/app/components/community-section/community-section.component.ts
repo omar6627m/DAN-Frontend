@@ -18,7 +18,7 @@ export class CommunitySectionComponent {
       type: "help"},
     {title:"Lorem ipsum dolor sit amet consectetur.",
       body: "Lorem ipsum dolor sit amet consectetur. Pharetra praesent purus posuere leo tincidunt mauris sed turpis et. Aliquet lorem nunc neque nec.",
-      type: "news"}
+      type: "announcement"}
   ];
 
   setSelectedTab(tab: string) {

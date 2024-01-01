@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-post-card',
@@ -8,4 +9,10 @@ import {Component, Input} from '@angular/core';
 export class PostCardComponent {
   @Input() post: { title: string, body: string, type: string; } | null = null;
 
+  constructor(private router: Router) {
+  }
+
+  goToDetails() {
+    this.router.navigate(["/feed/post"])
+  }
 }
