@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core';
 export class ArrowLinkComponent {
   @Input() position: string = 'end';
   @Input() text: string = 'More Causes';
+  @Input() link: string = '/causes';
 
 
 }

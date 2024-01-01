@@ -8,24 +8,23 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent {
   public mobileNavOpen: boolean = false;
-  @Output() openLogin: EventEmitter<void> = new EventEmitter<void>();
-  @Output() openRegister: EventEmitter<void> = new EventEmitter<void>();
-
+  loginModal: boolean = false;
+  registerModal: boolean = false;
 
   constructor(private router: Router) { }
 
   openMobileNav():void{
     this.mobileNavOpen = true;
   }
+
   closeMobileNav():void{
     this.mobileNavOpen = false;
   }
-
-  goToLogin(){
-    this.openLogin.emit();
+  toggleLoginModal(){
+    this.loginModal = !this.loginModal;
   }
-  goToRegister(){
-    this.openRegister.emit();
+  toggleRegisterModal(){
+    this.registerModal = !this.registerModal;
   }
 
 }

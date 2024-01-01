@@ -4,6 +4,7 @@ import { LoginComponent } from './components/auth-section/login/login.component'
 import { RegisterComponent } from './components/auth-section/register/register.component';
 import { HomePageComponent } from './components/landing-section/home-page/home-page.component';
 import { FeedPageComponent } from './components/landing-section/feed-page/feed-page.component';
+import {CausesPageComponent} from "./components/causes-page/causes-page.component";
 
 const routes: Routes = [
 
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
 
   { path: 'feed', component: FeedPageComponent },
+
+  { path: 'causes', component: CausesPageComponent },
 
 ];
 
