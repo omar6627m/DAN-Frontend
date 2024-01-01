@@ -23,7 +23,9 @@ import { CauseCardComponent } from './shared/cause-card/cause-card.component';
 import { ArrowLinkComponent } from './shared/arrow-link/arrow-link.component';
 import { PostCardComponent } from './shared/post-card/post-card.component';
 import { ModalComponent } from './shared/modal/modal.component';
-import { CausesPageComponent } from './components/causes-page/causes-page.component';
+import { CausesPageComponent } from './components/causes/causes-page/causes-page.component';
+import { CauseDetailsPageComponent } from './components/causes/cause-details-page/cause-details-page.component';
+import { MapComponent } from './shared/map/map.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { CausesPageComponent } from './components/causes-page/causes-page.compon
     PostCardComponent,
     ModalComponent,
     CausesPageComponent,
+    CauseDetailsPageComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

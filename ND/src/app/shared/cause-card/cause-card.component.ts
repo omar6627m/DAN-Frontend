@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cause-card',
@@ -8,4 +9,10 @@ import {Component, Input} from '@angular/core';
 export class CauseCardComponent {
   @Input() disabled: boolean = false;
 
+  constructor(private router: Router) {
+  }
+
+  learnMoreClickHandler() {
+    this.router.navigate(["/causes/id"]);
+  }
 }

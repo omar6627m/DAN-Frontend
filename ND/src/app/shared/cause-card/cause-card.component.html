@@ -9,7 +9,7 @@
     <span class="limit">Goal: 2.000.000 $</span>
   </div>
   <div class="buttons">
-    <app-button  [style]="'secondary'" >Learn More</app-button>
+    <app-button  [style]="'secondary'" (onClick)="learnMoreClickHandler()" >Learn More</app-button>
     <app-button [style]="disabled ? 'disabled' : 'primary'" >Donate Now </app-button>
   </div>
 </div>

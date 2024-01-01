@@ -1,0 +1,9 @@
+<google-map
+  *ngIf="apiLoaded | async"
+  [options]="options"
+  (mapClick)="addMarker($event)"
+  width="100%"
+  [height]="height"
+>
+  <map-marker *ngFor="let position of markerPositions" [position]="position" [options]="markerOptions" />
+</google-map>
