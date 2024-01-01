@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-community-section',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./community-section.component.scss']
 })
 export class CommunitySectionComponent {
+  @Input() type: string = "default";
   public tabs: string[] = ["All", "Announcements", "People’s needs", "Volunteers", "News"];
   public selectedTab = "All";
   public posts:{title:string,body:string, type: string;}[] = [
