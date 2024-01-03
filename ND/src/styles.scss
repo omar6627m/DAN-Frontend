@@ -4,9 +4,12 @@
 
 :root {
   --primary: #8EBC42;
-  --red: #F44A55;
-  --disabled: #4A4A4A;
   --primary-light: #FBFFF1;
+  --red: #F44A55;
+  --red-light: #FFF1F8;
+  --blue: #4290BC;
+  --blue-light: #F1F5FF;
+  --disabled: #4A4A4A;
   --typo-primary: #2F3031;
   --typo-v1: #58595A;
   --typo-v2: #888B8D;
@@ -141,6 +144,15 @@ form{
   border-radius: 10px;
   font-size: 16px;
 }
+.tag.red {
+  color: var(--red);
+  background-color: var(--red-light);
+}
+.tag.blue {
+  color: var(--blue);
+  background-color: var(--blue);
+}
+
 
 .icon-button{
   display: flex;
@@ -150,4 +162,9 @@ form{
     margin-top: 5px;
     color: var(--bg-v1);
   }
+}
+
+.dashboard-container{
+  display: grid;
+  grid-template-columns: 300px 1fr;
 }

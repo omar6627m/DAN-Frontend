@@ -28,6 +28,13 @@ import { CauseDetailsPageComponent } from './components/causes/cause-details-pag
 import { MapComponent } from './shared/map/map.component';
 import { PostDetailsPageComponent } from './components/post-details-page/post-details-page.component';
 import { CommentComponent } from './shared/comment/comment.component';
+import { GenericDashboardPageComponent } from './components/dashboard/generic-dashboard-page/generic-dashboard-page.component';
+import { MinimalHeaderComponent } from './shared/minimal-header/minimal-header.component';
+import { DashboardSideNavComponent } from './components/dashboard/dashboard-side-nav/dashboard-side-nav.component';
+import { PostsDashboardPageComponent } from './components/dashboard/posts-dashboard-page/posts-dashboard-page.component';
+import { CausesDashboardPageComponent } from './components/dashboard/causes-dashboard-page/causes-dashboard-page.component';
+import { DonationsDashboardPageComponent } from './components/dashboard/donations-dashboard-page/donations-dashboard-page.component';
+import { UsersDashboardPageComponent } from './components/dashboard/users-dashboard-page/users-dashboard-page.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +62,13 @@ import { CommentComponent } from './shared/comment/comment.component';
     MapComponent,
     PostDetailsPageComponent,
     CommentComponent,
+    GenericDashboardPageComponent,
+    MinimalHeaderComponent,
+    DashboardSideNavComponent,
+    PostsDashboardPageComponent,
+    CausesDashboardPageComponent,
+    DonationsDashboardPageComponent,
+    UsersDashboardPageComponent,
   ],
   imports: [
     BrowserModule,
