@@ -1,0 +1,22 @@
+.header {
+  padding: 0 15px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .logo > rect:first-child {
+    fill: var(--primary);
+  }
+  .bt-logout{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    i{
+      margin-top: 2px;
+      font-size: 15px;
+    }
+  }
+}
