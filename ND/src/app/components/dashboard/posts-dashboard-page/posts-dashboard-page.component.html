@@ -15,7 +15,7 @@
       </select>
       </div>
 
-      <app-button>
+      <app-button (onClick)="addItemModal()">
         <div class="bt-add">
           <i class="material-icons">add</i>
           <span>Add Post</span>
@@ -23,8 +23,43 @@
       </app-button>
     </div>
 
-    <app-dashboard-table [tableColumns]="tableColumns"></app-dashboard-table>
+    <app-dashboard-table
+      (editItemModalOpen)="editItemModal($event)"
+      (deleteItemModalOpen)="toggleDeleteModal($event)"
+      [tableColumns]="tableColumns">
+    </app-dashboard-table>
 
   </div>
 
 </app-generic-dashboard-page>
+
+<app-modal maxWidth="800px" (close)="toggleDataModal()" [isOpen]="dataModal">
+  <form class="modal-content" [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <label for="title">Title:</label>
+      <input type="text" id="title" formControlName="title" required>
+    </div>
+    <div class="form-row">
+      <label for="type">Type:</label>
+      <div class="select-wrapper">
+        <select name="post-type" id="type" formControlName="type" required>
+          <option value="Announcement">Announcement</option>
+          <option value="News">News</option>
+          <option value="Volunteer">Volunteer</option>
+          <option value="Help">Help</option>
+          <option value="Guideline">Guideline</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <app-button>Login</app-button>
+    </div>
+  </form>
+</app-modal>
+<app-modal maxWidth="800px" (close)="toggleDeleteModal(null)" [isOpen]="deleteModal">
+  <div class="modal-content delete-modal">
+    <h3>Are you sure you want to delete?</h3>
+    <p class="red-text">This action is irreversible.</p>
+    <app-button [style]="'red'" (onClick)="onDelete()">Delete</app-button>
+  </div>
+</app-modal>

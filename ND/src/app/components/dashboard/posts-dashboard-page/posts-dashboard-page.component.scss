@@ -5,33 +5,7 @@
     align-items: center;
 
     .select-wrapper {
-      position: relative;
       margin: 25px 0;
-    }
-
-    .select-wrapper::after {
-      content: "▼";
-      font-size: 10px;
-      top: 12px;
-      right: 10px;
-      position: absolute;
-      color: var(--typo-v1);
-    }
-
-    label {
-      font-size: 17px;
-      color: var(--typo-v1);
-      margin-right: 15px;
-    }
-    select {
-      background-color: var(--bg);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      padding: 7px 30px 7px 10px;
-      font-size: 15px;
-      color: var(--typo-v1);
-      -webkit-appearance: none;
-      appearance: none;
     }
 
     >*:nth-child(3){
@@ -48,5 +22,20 @@
     }
   }
 
+}
 
+.form-row {
+  margin: 0;
+  max-width: unset;
+
+}
+
+.delete-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  > *:nth-child(3) {
+    margin-left: auto;
+  }
 }

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-table',
@@ -7,5 +7,14 @@ import {Component, Input} from '@angular/core';
 })
 export class DashboardTableComponent {
   @Input() tableColumns: string[] = [];
+  @Output() editItemModalOpen: EventEmitter<number> = new EventEmitter<number>();
+  @Output() deleteItemModalOpen: EventEmitter<number> = new EventEmitter<number>();
+
+  openEditModal(id:number) {
+    this.editItemModalOpen.emit(id);
+  }
+  openDeleteModal(id:number) {
+    this.deleteItemModalOpen.emit(id);
+  }
 
 }
