@@ -1,5 +1,30 @@
 <app-generic-dashboard-page>
   <div class="dashboard-content">
     <h3>Posts Table</h3>
+    <div class="options">
+      <label for="post-type">Type:</label>
+
+      <div class="select-wrapper">
+      <select name="post-type" id="post-type" [ngModel]="postType" (ngModelChange)="onPostTypeChange($event)">
+        <option value="All">All</option>
+        <option value="Announcement">Announcement</option>
+        <option value="News">News</option>
+        <option value="Volunteer">Volunteer</option>
+        <option value="Help">Help</option>
+        <option value="Guideline">Guideline</option>
+      </select>
+      </div>
+
+      <app-button>
+        <div class="bt-add">
+          <i class="material-icons">add</i>
+          <span>Add Post</span>
+        </div>
+      </app-button>
+    </div>
+
+    <app-dashboard-table [tableColumns]="tableColumns"></app-dashboard-table>
+
   </div>
+
 </app-generic-dashboard-page>

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./posts-dashboard-page.component.scss']
 })
 export class PostsDashboardPageComponent {
+  public postType: string = "All";
+  public tableColumns: string[] = ["ID","TYPE","AUTHOR","TITLE","ACTIONS"];
+
+  onPostTypeChange(newValue: string) {
+    this.postType = newValue;
+    // TODO: Fetch or filter data
+  }
 
 }
