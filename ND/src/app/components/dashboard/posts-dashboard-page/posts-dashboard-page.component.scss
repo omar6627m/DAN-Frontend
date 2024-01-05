@@ -1,0 +1,41 @@
+.dashboard-content{
+
+  .options{
+    display: flex;
+    align-items: center;
+
+    .select-wrapper {
+      margin: 25px 0;
+    }
+
+    >*:nth-child(3){
+      margin-left: auto;
+    }
+    .bt-add{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      i{
+        font-size: 21px;
+      }
+    }
+  }
+
+}
+
+.form-row {
+  margin: 0;
+  max-width: unset;
+
+}
+
+.delete-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  > *:nth-child(3) {
+    margin-left: auto;
+  }
+}

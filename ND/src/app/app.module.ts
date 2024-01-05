@@ -15,7 +15,7 @@ import { RegisterComponent } from './components/auth-section/register/register.c
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ButtonComponent } from './shared/button/button.component';
 import { DonationSectionComponent } from './components/donation-section/donation-section.component';
 import {GoogleMapsModule} from "@angular/google-maps";
@@ -35,6 +35,7 @@ import { PostsDashboardPageComponent } from './components/dashboard/posts-dashbo
 import { CausesDashboardPageComponent } from './components/dashboard/causes-dashboard-page/causes-dashboard-page.component';
 import { DonationsDashboardPageComponent } from './components/dashboard/donations-dashboard-page/donations-dashboard-page.component';
 import { UsersDashboardPageComponent } from './components/dashboard/users-dashboard-page/users-dashboard-page.component';
+import { DashboardTableComponent } from './components/dashboard/dashboard-table/dashboard-table.component';
 
 @NgModule({
   declarations: [
@@ -69,16 +70,18 @@ import { UsersDashboardPageComponent } from './components/dashboard/users-dashbo
     CausesDashboardPageComponent,
     DonationsDashboardPageComponent,
     UsersDashboardPageComponent,
+    DashboardTableComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    GoogleMapsModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        GoogleMapsModule,
+        FormsModule,
 
 
-  ],
+    ],
   providers: [provideHttpClient(withJsonpSupport())],
   bootstrap: [AppComponent]
 })
