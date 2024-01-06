@@ -10,13 +10,5 @@
   .logo > rect:first-child {
     fill: var(--primary);
   }
-  .bt-logout{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    i{
-      margin-top: 2px;
-      font-size: 15px;
-    }
-  }
+
 }

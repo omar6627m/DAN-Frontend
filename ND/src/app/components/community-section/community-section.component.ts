@@ -24,5 +24,8 @@ export class CommunitySectionComponent {
   setSelectedTab(tab: string) {
     this.selectedTab = tab;
     // TODO: fetch posts of this tab
+    if (tab === "All") {
+
+    }
   }
 }

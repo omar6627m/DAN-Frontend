@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {Router} from "@angular/router";
+import {LocalStorageService} from "../../services/local-storage.service";
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent {
   loginModal: boolean = false;
   registerModal: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public localStorageService:LocalStorageService) { }
 
   openMobileNav():void{
     this.mobileNavOpen = true;
@@ -27,4 +28,7 @@ export class HeaderComponent {
     this.registerModal = !this.registerModal;
   }
 
+  logout() {
+    this.localStorageService.clearData();
+  }
 }

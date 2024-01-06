@@ -32,9 +32,17 @@
         <li><a routerLink="/feed">News</a></li>
         <li><a routerLink="/feed">Information</a></li>
       </ul>
-      <div class="cta">
+      <div *ngIf="!localStorageService.getUser()" class="cta">
         <app-button [style]="'secondary'" (onClick)="toggleLoginModal()">Login</app-button>
         <app-button [style]="'primary'" (onClick)="toggleRegisterModal()">Sign up</app-button>
+      </div>
+      <div *ngIf="localStorageService.getUser()" class="cta">
+        <app-button [style]="'secondary'" (click)="logout()">
+          <div class="bt-logout">
+            <span>Logout</span>
+            <i class="material-icons-outlined">logout</i>
+          </div>
+        </app-button>
       </div>
     </div>
 
@@ -46,9 +54,17 @@
         <li><a routerLink="/feed">News</a></li>
         <li><a routerLink="/feed">Information</a></li>
       </ul>
-      <div class="cta">
+      <div *ngIf="!localStorageService.getUser()" class="cta">
         <app-button [style]="'secondary'" (onClick)="toggleLoginModal()">Login</app-button>
         <app-button [style]="'primary'" (onClick)="toggleRegisterModal()">Sign up</app-button>
+      </div>
+      <div *ngIf="localStorageService.getUser()" class="cta">
+        <app-button [style]="'secondary'" (click)="logout()">
+          <div class="bt-logout">
+            <span>Logout</span>
+            <i class="material-icons-outlined">logout</i>
+          </div>
+        </app-button>
       </div>
     </div>
   </div>

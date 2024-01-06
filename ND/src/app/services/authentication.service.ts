@@ -5,6 +5,7 @@ import {environment as dev_env} from "../env/dev";
 import {environment as prod_env} from "../env/prod";
 
 import { catchError, map, tap } from 'rxjs/operators';
+import {LocalStorageService} from "./local-storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class AuthenticationService {
   private loginUrl = this.API_URL + 'login';
   private registerUrl = this.API_URL + 'account/register';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private localStorageService: LocalStorageService) {
     // if (isDevMode()) {
     //   this.API_URL = dev_env.apiKey;
     // } else {
@@ -54,7 +55,8 @@ export class AuthenticationService {
    private handleAuthentication(response: any): void {
       //Store Token
       //Store Use Infos(Role, name , email  ...)
-
+     this.localStorageService.setUser(response);
+     console.log(this.localStorageService.getUser());
 
   }
 

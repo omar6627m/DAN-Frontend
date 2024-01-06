@@ -8,7 +8,7 @@
     <div class="description">DAN has launched an urgent campaign to gather help for the people in Morocco.
         We urge you to donate or volunteer  in anyway you can.</div>
     <div class="buttons">
-        <app-button [style]="'secondary'" >Volunteer</app-button>
+        <app-button [style]="'secondary'" (onClick)="goToFeed()" >Volunteer</app-button>
         <app-button [style]="'primary'" >Donate Now </app-button>
     </div>
     <app-arrow-link position="center"></app-arrow-link>

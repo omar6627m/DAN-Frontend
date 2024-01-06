@@ -27,8 +27,8 @@ export class LocalStorageService {
     const expiration = localStorage.getItem(this.expirationKey);
     if (expiration && new Date(expiration) > new Date()) {
       return localStorage.getItem(this.tokenKey);
-    } 
-    this.removeToken();
+    }
+    this.clearData();
     return null;
   }
 
@@ -47,9 +47,9 @@ export class LocalStorageService {
     }
 
 
-    
- 
-    //Logout 
+
+
+    //Logout
   clearData(): void {
     localStorage.clear();
   }
