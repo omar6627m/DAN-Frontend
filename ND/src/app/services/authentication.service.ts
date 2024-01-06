@@ -11,18 +11,18 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class AuthenticationService {
 
-
-  private loginUrl = 'http://localhost:8080/login';
-  private registerUrl = 'http://localhost:8080/account/register'
+  private API_URL = "http://localhost:8080/";
+  private loginUrl = this.API_URL + 'login';
+  private registerUrl = this.API_URL + 'account/register';
 
   constructor(private http: HttpClient) {
-    if (isDevMode()) {
-      console.log("DEV");
-      console.log(dev_env.apiKey);
-    } else {
-      console.log("PROD");
-      console.log(prod_env.apiKey);
-    }
+    // if (isDevMode()) {
+    //   this.API_URL = dev_env.apiKey;
+    // } else {
+    //   this.API_URL = prod_env.apiKey;
+    // }
+    // this.loginUrl = this.API_URL + 'users-microservice/login';
+    // this.registerUrl = this.API_URL + 'users-microservice/account/register'
   }
 
 
