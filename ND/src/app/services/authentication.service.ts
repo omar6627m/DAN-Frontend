@@ -1,38 +1,41 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable , isDevMode } from '@angular/core';
+import {Injectable, isDevMode} from '@angular/core';
 import { Observable,of } from 'rxjs';
+import {environment as dev_env} from "../env/dev";
+import {environment as prod_env} from "../env/prod";
+
 import { catchError, map, tap } from 'rxjs/operators';
-import { environment } from '../environement/environment';
-import { environment as e} from '../environement/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private api  = environment.apiKey; 
-  private loginUrl = 'http://localhost:8080/login'; 
-  private registerUrl = 'http://localhost:8080/account/register'
-  
-  constructor(private http: HttpClient) {
 
+  private loginUrl = 'http://localhost:8080/login';
+  private registerUrl = 'http://localhost:8080/account/register'
+
+  constructor(private http: HttpClient) {
     if (isDevMode()) {
-      console.log(environment.apiKey);
+      console.log("DEV");
+      console.log(dev_env.apiKey);
     } else {
-      console.log(e.apiKey);
+      console.log("PROD");
+      console.log(prod_env.apiKey);
     }
-   }
+  }
+
+
+
 
   login(email: string, password: string): Observable<any> {
     const loginData = { email, password };
-   
-    
+
     return this.http.post<any>(`${this.loginUrl}`, loginData)
       .pipe(
         tap(response => this.handleAuthentication(response)),
         catchError(this.handleError('Login', []))
       );
-      
   }
 
 
@@ -62,5 +65,5 @@ export class AuthenticationService {
       return of(result as T);
     };
   }
-  
+
 }
